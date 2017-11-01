@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   <hibernate-mapping>
+   	<!-- 遍歷class与table之间映射关系 -->
+   	<!-- name代表哪一个类，table代表哪一个表 -->
+   	<class name="ex.ssh1.entity.User" table="user">
+   		<!-- 建立每一个属性和表每一列的关系 -->
+   		<!-- name表示属性名，column表示类名 -->
+   		<id name="id" column="id">
+   			<generator class="native"/>
+   		</id>
+   		<!-- type表示数据类型，可以使用hibernate对应String的类型 -->
+   		<property name="username" column="username" type="string"/>
+   		<property name="password" column="password" type="string"/>
+   		<property name="email" column="email" type="string"></property>
+   		<property name="sex" column="sex" type="string"></property>
+   	</class>
+   </hibernate-mapping>
